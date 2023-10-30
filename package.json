@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.2.1",
     "@astrojs/react": "^3.0.4",
     "@astrojs/tailwind": "^5.0.2",
+    "@fontsource-variable/hepta-slab": "^5.0.17",
     "@fontsource-variable/montserrat": "^5.0.16",
     "@fontsource-variable/open-sans": "^5.0.18",
     "@fontsource/hepta-slab": "^5.0.17",
