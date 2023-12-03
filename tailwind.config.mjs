@@ -7,6 +7,10 @@ export default {
 				body: ["'Montserrat Variable'"]
 			}
 		},
+		colors: {
+			white: '#ffffff',
+			grey: "#D9D9D9"
+		}
 	},
 	plugins: [],
 }
