@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import CustomImage  from "./CustomImage.astro"
 import CustomText from "./CustomText.astro"
-const {text, image, imageLocation, imageLocationDesktop} = Astro.props
+const {text, image, imageLocation, imageLocationDesktop, color} = Astro.props
 enum ImageLocationDesktop {
     Right = "right",
     Left= "left",
@@ -13,13 +13,13 @@ enum ImageLocationDesktop {
 {/*for mobile*/}
 <div class="flex lg:hidden flex-col lg:flex-row lg:justify-between visible xl:invisible">
         <div class="lg:w-1/2">
-            <Image src={image} alt="yoga image"/>
+            <Image class="py-5" src={image} alt="yoga image"/>
         </div>
-        <h class="self-center pb-20 text-4xl">{text}</h>  
+        <h class="self-center pb-20 text-4xl sm:text-5xl md:text-6xl">{text}</h>  
 </div>
 
 {/*for desktop*/}
-<div class="hidden lg:flex flex-col lg:flex-row lg:justify-between">
+<div class=`hidden lg:flex flex-col lg:flex-row lg:justify-between bg-${color}`>
     {imageLocationDesktop === ImageLocationDesktop.Left && 
         <CustomImage  src={image}/>
         <CustomText text={text} />
