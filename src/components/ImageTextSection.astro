@@ -18,15 +18,17 @@ enum ImageLocationDesktop {
         <h class="self-center pb-20 text-4xl sm:text-5xl md:text-6xl">{text}</h>  
 </div>
 
-{/*for desktop*/}
+{/*for desktop
+TODO tailwind doesnt apply the color grey but it should*/}
 <div class=`hidden lg:flex flex-col lg:flex-row lg:justify-between bg-${color}`>
+    <!-- <h1>{`bg-${color}`}</h1> -->
     {imageLocationDesktop === ImageLocationDesktop.Left && 
-        <CustomImage  src={image}/>
+        <CustomImage src={image}/>
         <CustomText text={text} />
     }
     {imageLocationDesktop === ImageLocationDesktop.Right && 
         <CustomText text={text} />
-        <CustomImage  src={image}/>
+        <CustomImage src={image}/>
     }
 </div>
 
