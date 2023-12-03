@@ -6,18 +6,22 @@ import ImageTextSection from "../components/ImageTextSection.astro";
 import töpferhaus from "../assets/töpferhaus01.jpeg";
 import murmel from "../assets/IMG_3281.jpeg";
 import yogaUnterricht from "../assets/IMG_1013.jpg";
-import bigLogo from "../assets/bigLogo.png";
-
+import Logo from "../assets/Logo_765x765.png";
+import BigLogo from "../assets/Logo_1526x1526.png";
 enum ImageLocationDesktop {
     Right = "right",
     Left= "left",
+}
+enum Color{
+    Grey = "grey",
+    White = "white",
 }
 ---
 
 <MainLayout title="Fehmarn Yoga" class="flex flex-col content-center">
     <HeroSection />
-    <ImageTextSection imageLocationDesktop={ImageLocationDesktop.Right} text="heike wanning" image={töpferhaus}/>
-    <ImageTextSection imageLocationDesktop={ImageLocationDesktop.Left} text="yin yoga wohnzimmer" image={murmel}/>
-    <ImageTextSection imageLocationDesktop={ImageLocationDesktop.Right} text="retreats" image={yogaUnterricht}/>
-    <ImageTextSection imageLocationDesktop={ImageLocationDesktop.Left} text="kontakt" image={bigLogo}/>
+    <ImageTextSection color={Color.Grey} imageLocationDesktop={ImageLocationDesktop.Right} text="heike wanning" image={töpferhaus}/>
+    <ImageTextSection color={Color.White} imageLocationDesktop={ImageLocationDesktop.Left} text="yin yoga wohnzimmer" image={murmel}/>
+    <ImageTextSection color={Color.Grey} imageLocationDesktop={ImageLocationDesktop.Right} text="retreats" image={yogaUnterricht}/>
+    <ImageTextSection color={Color.White} imageLocationDesktop={ImageLocationDesktop.Left} text="kontakt" image={BigLogo}/>
 </MainLayout>
