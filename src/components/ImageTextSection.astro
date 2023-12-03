@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import CustomImage  from "./CustomImage.astro"
+import CustomText from "./CustomText.astro"
+const {text, image, imageLocation, imageLocationDesktop} = Astro.props
+enum ImageLocationDesktop {
+    Right = "right",
+    Left= "left",
+}
+//TODO find media query for desktop
+---
+
+{/*for mobile*/}
+<div class="flex lg:hidden flex-col lg:flex-row lg:justify-between visible xl:invisible">
+        <div class="lg:w-1/2">
+            <Image src={image} alt="yoga image"/>
+        </div>
+        <h class="self-center pb-20 text-4xl">{text}</h>  
+</div>
+
+{/*for desktop*/}
+<div class="hidden lg:flex flex-col lg:flex-row lg:justify-between">
+    {imageLocationDesktop === ImageLocationDesktop.Left && 
+        <CustomImage  src={image}/>
+        <CustomText text={text} />
+    }
+    {imageLocationDesktop === ImageLocationDesktop.Right && 
+        <CustomText text={text} />
+        <CustomImage  src={image}/>
+    }
+</div>
+
