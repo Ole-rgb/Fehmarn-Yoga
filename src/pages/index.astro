@@ -1,15 +1,23 @@
 ---
-import MainLayout from "../layouts/main-layout.astro";
-
-import ImageSection from "../components/ImageSection.astro";
-import TextSection from "../components/TextSection.astro"
 import { Image } from "astro:assets";
-import Cart from "../components/Cart.astro";
+import MainLayout from "../layouts/main-layout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ImageTextSection from "../components/ImageTextSection.astro";
+import töpferhaus from "../assets/töpferhaus01.jpeg";
+import murmel from "../assets/IMG_3281.jpeg";
+import yogaUnterricht from "../assets/IMG_1013.jpg";
+import bigLogo from "../assets/bigLogo.png";
+
+enum ImageLocationDesktop {
+    Right = "right",
+    Left= "left",
+}
 ---
 
-<MainLayout title="Fehmarn Yoga">
-    <TextSection text="Mein Name ist Heike Wanning. Ich praktiziere Yin Yoga auf der Insel Fehmarn." />
-    <ImageSection />
-    <TextSection text="Ich freue mich darauf, dich kennenzulernen!" />
-    <!-- <Cart /> -->
+<MainLayout title="Fehmarn Yoga" class="flex flex-col content-center">
+    <HeroSection />
+    <ImageTextSection imageLocationDesktop={ImageLocationDesktop.Right} text="heike wanning" image={töpferhaus}/>
+    <ImageTextSection imageLocationDesktop={ImageLocationDesktop.Left} text="yin yoga wohnzimmer" image={murmel}/>
+    <ImageTextSection imageLocationDesktop={ImageLocationDesktop.Right} text="retreats" image={yogaUnterricht}/>
+    <ImageTextSection imageLocationDesktop={ImageLocationDesktop.Left} text="kontakt" image={bigLogo}/>
 </MainLayout>

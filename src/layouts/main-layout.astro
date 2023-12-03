@@ -15,11 +15,10 @@ const {title} = Astro.props
         <meta title={title} />
     </head>
     <body class="flex justify-center">
-        <main class="px-10 py-8 lg:max-w-7xl">
-            <Nav />
-            <slot />
+        <!-- <main class="px-10 py-8 lg:max-w-7xl"> -->
+        <main>
+                <slot />
             <!-- All the different pages to be rendered -->
-            <Footer />
         </main>
     </body>
 </html>
