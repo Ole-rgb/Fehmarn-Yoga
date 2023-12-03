@@ -1,27 +1,29 @@
 ---
 import pic1 from "../assets/3F1EF8AD-EF69-43D8-8366-9B35C5D06965.jpeg";
 import pic2 from "../assets/E6B8D913-7F7E-4FBC-B835-86B39115F92B.jpeg";
-import pic3 from "../assets/IMG_1358.jpeg";
-import pic4 from "../assets/IMG_3281.jpeg";
+import pic3 from "../assets/yinyoga01.jpeg";
+import murmel from "../assets/IMG_3281.jpeg";
+import bolster from "../assets/IMG_8491.jpg";
+import torfhaus from "../assets/töpferhaus01.jpeg";
 import { Image } from "astro:assets";
 import Overlay  from "./Overlay.astro"
 ---
 <div class="flex justify-center">
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
         <div class="relative aspect-[4/3]">
-            <Image class="rounded-lg w-full h-full object-cover" src={pic1} alt="Picture 1"/>
+            <Image class="rounded-lg w-full h-full object-cover" src={torfhaus} alt="Picture 1"/>
             <!-- <Overlay title="Wohnzimmer" description="" /> -->
         </div>
         <div class="relative aspect-[4/3]">
-            <Image class="rounded-lg w-full h-full object-cover" src={pic2} alt="Picture 2"/>
+            <Image class="rounded-lg w-full h-full object-cover" src={bolster} alt="Picture 2"/>
             <!-- <Overlay title="Retreat" description="" /> -->
         </div>
         <div class="relative aspect-[4/3]">
-            <Image class="rounded-lg w-full h-full object-cover" src={pic3} alt="Picture 3"/>
+            <Image class="rounded-lg w-full h-full object-cover" src={murmel} alt="Picture 3"/>
             <!-- <Overlay title="" description="" /> -->
         </div>
         <div class="relative aspect-[4/3]">
-            <Image class="rounded-lg w-full h-full object-cover" src={pic4} alt="Picture 4"/>
+            <Image class="rounded-lg w-full h-full object-cover" src={pic3} alt="Picture 4"/>
             <!-- <Overlay title="" description="" /> -->
         </div>
     </div>
